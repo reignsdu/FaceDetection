@@ -4,8 +4,7 @@ import numpy as np
 cv2.namedWindow("reigns")#命名一个窗口
 cap=cv2.VideoCapture(0)#打开摄像头
 success,frame=cap.read()#读取一桢图像，前一个返回值是是否成功，后一个返回值是图像本身
-classifier=cv2.CascadeClassifier('/home/reigns/Public/opencv-3.1.0/data/haarcascades/haarcascade_frontalface_alt.xml')   #确保此xml文件与该py文件在一个文件夹下，否则将这里改为绝对路径，此xml文件可在D:\My Documents\Downloads\opencv\sources\data\haarcascades下找到。
-
+classifier=cv2.CascadeClassifier('/home/reigns/Public/opencv-3.1.0/data/haarcascades/haarcascade_frontalface_alt.xml')   #确保此xml文件与该py文件在一个文件夹下，或在open-cv安装包中找到
 while success:
     success,frame=cap.read()
     size=frame.shape[:2]#获得当前桢彩色图像的大小
